@@ -9,20 +9,18 @@ import java.util.Date;
 @Component
 @Slf4j
 public class EnviarEmailJob {
-
-    @Scheduled(cron = "0 0/1 * * * ?")
+    @Scheduled(cron = "0-58/2 * * * * ?")
     public void verificarDataHoraAtual(){
 
         Date data = new Date();
-
         log.info("Rodando schedule 1 - Última execução: " + data);
-    }
 
-    @Scheduled(cron = "0 0/2 * * * ?")
+    }
+    @Scheduled(cron = "1-59/2 * * * * ?")
     public void verificarDataHoraAtual2(){
 
         Date data = new Date();
+        log.info("Rodando schedule 2 - Última execução: " + data);
 
-        log.info("Rodando schedule 2: " + data );
     }
 }
