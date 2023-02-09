@@ -26,7 +26,7 @@ public class AppHealth implements HealthIndicator {
 
     @PostConstruct
     public void init() {
-        map.put("dataHoraSubidaApp", dataHora());
+        map.put("StartApplication", dataHora());
     }
 
     private String dataHora() {
